@@ -99,8 +99,8 @@ baka_func()
         do
             read -p "Enter database name:" db
  
-             RESULT=`mysql --user="$db_user" --password="$db_password" \        
-             --skip-column-names -e "SHOW DATABASES LIKE '$db'"`
+             RESULT=`mysql --user="$db_user" --password="$db_password" \
+                   --skip-column-names -e "SHOW DATABASES LIKE '$db'"`
              if [ $RESULT ]; then
                 echo "The Database exist, choose another name for database."
                 read -p "Enter database name again:" db
@@ -108,7 +108,11 @@ baka_func()
                  break
             fi
         done
-      echo $password | sudo rm -r bakaplan	
+      echo $password | sudo rm -r bakaplan
+      rm -r bp
+      rm -r ~/public_html/BaKaPlan	
+      rm -r ~/public_html/SeatPlan
+      
       echo ""
       echo "######################################################"
       echo "#                                                    #"
