@@ -440,12 +440,12 @@ Install_mysql()
     result=$(dpkg-query -W -f='${package}\n' "libmysql++-dev")
     if  [ $result = libmysql++-dev ] 
         then
-        echo "libmyqsql++-dev and libmysql++ already installed"
+        echo "libmysql++-dev and libmysql++ already installed"
         boost    
     else
-	    echo "libmyqsql++-dev and libmysql++ is not installed in your system"
-        echo "Installing libmyqsql++-dev and libmysql++"
-	    echo $password | sudo -S apt-get install -y libmyqsql++-dev and libmysql++
+	    echo "libmyqsql++-dev and libmysql++ are not installed in your system"
+        echo "Installing libmysql++-dev and libmysql++"
+	    echo $password | sudo -S apt-get install -y libmysql++-dev libmysql++
         boost    
     fi
 }
