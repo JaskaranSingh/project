@@ -399,15 +399,15 @@ Install_jwsmtp()
 
 boost()
 {
-    result=$(dpkg-query -W -f='${package}\n' "libboost1.48-dev")
-    if  [ $result = libboost1.48-dev ] 
+    result=$(dpkg-query -W -f='${package}\n' "libboost1.49-dev")
+    if  [ $result = libboost1.49-dev ] 
         then
         echo "Boost library already installed"
         Install_jwsmtp
     else
 	    echo "Boost library is not installed in your system"
         echo "Installing Boost library"
-	    echo $password | sudo -S apt-get install -y libboost1.48-dev
+	    echo $password | sudo -S apt-get install -y libboost1.49-dev
        Install_jwsmtp
     fi
 }
