@@ -514,7 +514,7 @@ cgi_func()
     
     cd /etc/apache2/sites-available
     echo $password | sudo -S chmod -R 777 default
-    if grep -q '/home/*/public_html/cgi-bin' default
+    if grep -q '/public_html/cgi-bin' default
         then
         cgicc_func
     else
