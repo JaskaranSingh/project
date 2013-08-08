@@ -134,9 +134,9 @@ baka_func()
       read -p "enter your email id:" user_id
       read -p "enter your server(type localhost or the IP): " server
 
-      sed -i 's/"USER_EMAIL_ID"/'\"$user_id\"'/' sendmail-detail.h      
-      sed -i 's/"LOCALHOST/SERVER_IP"/'\"$server\"'/' sendmail-detail.h
-      sed -i 's/"SYSTEM_USERNAME"/'\"$username\"'/' sendmail-detail.h
+      sed -i 's/"USER_EMAIL_ID"/'\"$user_id\"'/' sendmail-detail.h    
+      sed -i 's/"LOCALHOST_OR_SERVER_IP"/'\"$server\"'/' sendmail-detail.h
+      sed -i 's/SYSTEM_USERNAME/'$username'/' sendmail-detail.h
 
       cd ~/public_html/cgi-bin/bakaplan
       make install
@@ -212,9 +212,11 @@ baka_func()
           cd ~/public_html/cgi-bin/bakaplan/frontend/src/header
           read -p "enter your email id:" user_id
           read -p "enter your server(type localhost or the IP): " server
+         
           sed -i 's/"USER_EMAIL_ID"/'\"$user_id\"'/' sendmail-detail.h    
-          sed -i 's/"LOCALHOST/SERVER_IP"/'\"$server\"'/' sendmail-detail.h
-          sed -i 's/"SYSTEM_USERNAME"/'\"$username\"'/' sendmail-detail.h
+          sed -i 's/"LOCALHOST_OR_SERVER_IP"/'\"$server\"'/' sendmail-detail.h
+          sed -i 's/SYSTEM_USERNAME/'$username'/' sendmail-detail.h
+          
           cd ~/public_html/cgi-bin/bakaplan
           make install
             
