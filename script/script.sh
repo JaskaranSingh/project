@@ -80,7 +80,7 @@ baka_func()
             if [ $RESULT ]; then
                 echo ""
                 echo "Username and Password Matches"
-                 a+=1
+                 a=`expr $a + 1`
                  break
                  
             else
@@ -163,7 +163,7 @@ baka_func()
             if [ $RESULT ]; then
                  echo ""
                  echo "Username and Password Matches"
-                 a+=1
+                 a=`expr $a + 1`
                  break
             else
                  echo ""
