@@ -1,7 +1,7 @@
 #####################################################################
 #                "Welcome to BaKaPlan installation script"          #
 #  Discription: This script checks the internet connectivity        # 
-#                and starts the installation.			            #                               
+#                and starts the installation.			    #                               
 #                                                                   #   		       
 #                                                                   #  		       
 # Please read AutoInstall.txt file before you run this script       #  		       
@@ -158,7 +158,7 @@ baka_func()
         a=1 
         while [ $a -ne 2 ]
         do
-            read -sp "Enter your mysql username:" db_user       
+            read -p "Enter your mysql username:" db_user       
             read -sp "Enter your mysql password:" db_password
             echo ""
 
