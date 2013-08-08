@@ -485,6 +485,7 @@ cgicc_func()
 
 cgi_func()
 {
+    cd /home/jaskaran
     echo "Configuring home directory"
     echo "Checking and creating public_html"
     if [ -d "public_html" ]; then
