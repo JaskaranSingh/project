@@ -585,4 +585,6 @@ Install_compiler()
 Install_compiler
 echo $password | sudo -S ln -s /usr/local/lib/libjwsmtp-1.32.so \
      /usr/lib/libjwsmtp-1.32.so
+cd ~/public_html/cgi-bin/bakaplan
+make
 firefox http://localhost/~$username/cgi-bin/bp/login
