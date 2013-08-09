@@ -207,9 +207,10 @@ baka_func()
             
           echo "Modifying 'database-detail.h' file"
           cd bakaplan/frontend/src/header
-          sed -i 's/USER "bakaplan"/USER '\"$db_user\"'/' database-detail.h
-          sed -i 's/PASSWORD "q"/PASSWORD '\"$db_password\"'/' database-detail.h 
-          sed -i 's/DATABASE "bakaplan"/DATABASE '\"$db\"'/' database-detail.h
+          sed -i 's/USER "DATABASE_USERNAME"/USER '\"$db_user\"'/' database-detail.h
+          sed -i 's/PASSWORD "DATABASE_PASSWORD"/PASSWORD '\"$db_password\"'/' database-detail.h 
+          sed -i 's/DATABASE "DATABASE_NAME"/DATABASE '\"$db\"'/' database-detail.h
+
            
           echo "Modifying 'sendmail-detail.h' file"
           
