@@ -268,14 +268,11 @@ git_func()
 
 exim_func()
 {
-    result=$(dpkg-query -W -f='${package}\n' "exim4")
-    if  [ $result = exim4 ]; then
-        echo "Exim4 already installed"
-	    git_func
-    else
+    
         clear
 	    read -p "Enter your email usernamep(USERNAME@example.com):" e_user
         read -sp "Enter your email password:" e_password
+        clear
         echo ":::::::::: Attention::::::::::"
         echo "\n\nExim installation starting"
         echo "A file will open shortly"
@@ -283,13 +280,12 @@ exim_func()
         sleep 5s
 	    echo $password | sudo rm -rf /var/lib/dpkg/lock
         echo $password | sudo apt-get install -y exim4
-        gedit exim.txt
+        gedit ~/project/script/exim.txt
         echo $password | sudo dpkg-reconfigure exim4-config
         echo $password | sudo chmod -R 777 /etc/exim4/passwd.client
         cd /etc/exim4
         echo "*:$e_user:$e_password" >> passwd.client
         git_func
-    fi
 }       
 
 
