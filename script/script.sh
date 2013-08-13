@@ -280,7 +280,7 @@ exim_func()
         sleep 5s
 	    echo $password | sudo rm -rf /var/lib/dpkg/lock
         echo $password | sudo apt-get install -y exim4
-        gedit ~/project/script/exim.txt
+        xterm -e gedit ~/project/script/exim.txt
         echo $password | sudo dpkg-reconfigure exim4-config
         echo $password | sudo chmod -R 777 /etc/exim4/passwd.client
         cd /etc/exim4
