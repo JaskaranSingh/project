@@ -317,7 +317,7 @@ hpdf_func()
              tar -xzf master
              cd libharu-libharu-22e741e
              echo $password | sudo apt-get install -y cmake
-             cmake -G 'Unix Makefiles' 
+             cmake ./ 
              make
              echo $password | sudo make install
 
@@ -326,7 +326,7 @@ hpdf_func()
              tar -xzf master
              cd libharu-libharu-22e741e
              echo $password | sudo apt-get install -y cmake
-             cmake -G 'Unix Makefiles' 
+             cmake ./ 
              make
              echo $password | sudo make install
 
